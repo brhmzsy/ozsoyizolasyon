@@ -1,3 +1,6 @@
+
+<?php include '../../temel/ayarlar.php'; ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
@@ -7,57 +10,18 @@
 <html class="no-js">
 <!--<![endif]-->
 
-<head>
-	<!-- Basic Page Needs -->
-	<meta charset="utf-8">
-	<title>Be</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Favicons -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<!-- FONTS -->
-	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,400italic,500,700,700italic,900'>
-	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Comfortaa:100,200,300,400,400italic,500,700,700italic,900'>
-	<!-- CSS -->
-	<link rel='stylesheet' href='../../css/global.css'>
-	<link rel='stylesheet' href='../../css/el_demo.css'>
-	<link rel='stylesheet' href='css/structure.css'>
-	<link rel='stylesheet' href='css/renovate4.css'>
-	<link rel='stylesheet' href='css/custom.css'> </head>
+<?php include SAYFA . '/temel/head.php'; ?>
 
 <body class="page style-simple button-flat layout-full-width if-zoom if-border-hide no-content-padding header-transparent header-fw minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-right menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-header-mini mobile-sticky be-reg-2171 elementor-default elementor-kit-30 elementor-page elementor-page-12">
 	<div id="Wrapper">
-		<div id="Header_wrapper">
-			<header id="Header">
-				<div id="Top_bar">
-					<div class="container">
-						<div class="column one">
-							<div class="top_bar_left clearfix">
-								<div class="logo">
-									<a id="logo" href="/" title="BeRenovate 4 - Betheme" data-height="60" data-padding="15"><img class="logo-main scale-with-grid" src="images/renovate4_logo.png" data-retina="images/renovate4_logo@2x.png" data-height="58"><img class="logo-sticky scale-with-grid" src="images/renovate4_logo.png" data-retina="images/renovate4_logo@2x.png" data-height="58"><img class="logo-mobile scale-with-grid" src="images/renovate4_logo.png" data-retina="images/renovate4_logo@2x.png" data-height="58"><img class="logo-mobile-sticky scale-with-grid" src="images/renovate4_logo.png" data-retina="images/renovate4_logo@2x.png" data-height="58"></a>
-								</div>
-								<div class="menu_wrapper">
-									<nav id="menu">
-										<ul id="menu-menu" class="menu menu-main">
-											<li> <a href="/"><span>Home</span></a> </li>
-											<li> <a href="about.html"><span>About us</span></a> </li>
-											<li> <a href="realizations.html"><span>Realizations</span></a> </li>
-											<li class="current-menu-item"> <a href="pricing.html"><span>Services &#038; Pricing</span></a> </li>
-											<li> <a href="contact.html"><span>Contact</span></a> </li>
-										</ul>
-									</nav><a class="responsive-menu-toggle" href="#"><i class="icon-menu-fine"></i></a> </div>
-							</div>
-							<div class="top_bar_right">
-								<div class="top_bar_right_wrapper"> <a href="https://1.envato.market/9ZxXY" class="action_button" target="_blank">Buy now</a> </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-		</div>
-		<div id="Content">
+
+        <div id="Header_wrapper">
+            <header id="Header">
+                <?php include SAYFA . '/temel/menu.php'; ?>
+            </header>
+        </div>
+
+        <div id="Content">
 			<div class="content_wrapper clearfix">
 				<div class="sections_group">
 					<div class="entry-content">
@@ -254,7 +218,7 @@
 																		<div class="elementor-element elementor-element-58dc8f2 elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="58dc8f2" data-element_type="widget" data-widget_type="button.default">
 																			<div class="elementor-widget-container">
 																				<div class="elementor-button-wrapper">
-																					<a href="contact.html" class="elementor-button-link elementor-button elementor-size-sm" role="button"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-text">View more details</span> </span>
+																					<a href="contact.php" class="elementor-button-link elementor-button elementor-size-sm" role="button"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-text">View more details</span> </span>
 																					</a>
 																				</div>
 																			</div>
@@ -322,7 +286,7 @@
 																		<div class="elementor-element elementor-element-94d4f6d elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="94d4f6d" data-element_type="widget" data-widget_type="button.default">
 																			<div class="elementor-widget-container">
 																				<div class="elementor-button-wrapper">
-																					<a href="contact.html" class="elementor-button-link elementor-button elementor-size-sm" role="button"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-text">View more details</span> </span>
+																					<a href="contact.php" class="elementor-button-link elementor-button elementor-size-sm" role="button"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-text">View more details</span> </span>
 																					</a>
 																				</div>
 																			</div>
@@ -391,7 +355,7 @@
 																		<div class="elementor-element elementor-element-d70846c elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="d70846c" data-element_type="widget" data-widget_type="button.default">
 																			<div class="elementor-widget-container">
 																				<div class="elementor-button-wrapper">
-																					<a href="contact.html" class="elementor-button-link elementor-button elementor-size-sm" role="button"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-text">View more details</span> </span>
+																					<a href="contact.php" class="elementor-button-link elementor-button elementor-size-sm" role="button"> <span class="elementor-button-content-wrapper"> <span class="elementor-button-text">View more details</span> </span>
 																					</a>
 																				</div>
 																			</div>
@@ -725,61 +689,9 @@
 				</div>
 			</div>
 		</div>
-		<footer id="Footer" class="clearfix">
-			<div class="widgets_wrapper">
-				<div class="container">
-					<div class="column one-third">
-						<aside class="widget_text widget widget_custom_html">
-							<h4>Address</h4>
-							<div class="textwidget custom-html-widget">
-								<hr class="no_line" style="margin:0 auto 10px">
-								<p> Studio 132 Everystreet
-									<br> Manhatthan
-									<br> NY 1234 USA </p>
-								<hr class="no_line" style="margin:0 auto 10px">
-								<p> Monday — Saturday: 8AM — 4PM </p>
-							</div>
-						</aside>
-					</div>
-					<div class="column one-third">
-						<aside class="widget_text widget widget_custom_html">
-							<h4>Useful links</h4>
-							<div class="textwidget custom-html-widget">
-								<hr class="no_line" style="margin:0 auto 10px"> <a href="#">Home</a>
-								<br> <a href="#">About us</a>
-								<br> <a href="#">Realizations</a>
-								<br> <a href="#">Services & Pricing</a>
-								<br> <a href="#">Contact</a> </div>
-						</aside>
-					</div>
-					<div class="column one-third">
-						<aside class="widget_text widget widget_custom_html">
-							<h4>Phone</h4>
-							<div class="textwidget custom-html-widget">
-								<hr class="no_line" style="margin:0 auto 10px">
-								<h3><strong>+44-444 014 4501</strong></h3>
-								<hr class="no_line" style="margin:0 auto 10px">
-								<p> If you have a question,
-									<br> please contact at <a href="#"><span>noreply@envato.com</span></a> </p>
-							</div>
-						</aside>
-					</div>
-				</div>
-			</div>
-			<div class="footer_copy">
-				<div class="container">
-					<div class="column one"> <a id="back_to_top" class="button button_js" href><i class="icon-up-open-big"></i></a>
-						<div class="copyright"> &copy; 2020 BeRenovate 4 - BeTheme. Muffin group - HTML by <a target="_blank" rel="nofollow" href="https://1.envato.market/9ZxXY">BeantownThemes</a> </div>
-						<ul class="social">
-							<li class="facebook"> <a href="#" title="Facebook"><i class="icon-facebook"></i></a> </li>
-							<li class="linkedin"> <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a> </li>
-							<li class="pinterest"> <a href="#" title="Pinterest"><i class="icon-pinterest"></i></a> </li>
-							<li class="instagram"> <a href="#" title="Instagram"><i class="icon-instagram"></i></a> </li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
+
+        <?php include SAYFA . '/temel/footer.php'; ?>
+
 	</div>
 	<div id="Side_slide" class="right light" data-width="250">
 		<div class="close-wrapper"> <a href="#" class="close"><i class="icon-cancel-fine"></i></a> </div>
