@@ -5,3 +5,33 @@
 .attachment-full {
     height: 750px !important;
 }
+
+.hakkimizda_sayac{
+    text-align: center;
+}
+
+.facebook_index_btn{
+    left: 120px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .hizmet_img {
+        height: 350px !important;
+    }
+
+    .attachment-full {
+        height: 400px !important;
+    }
+
+    .proje_img {
+        height: 350px !important;
+    }
+
+    .facebook_index_btn{
+        left: 0px !important;
+    }
+
+    .rev-btn{
+        margin-top: 20px !important;
+    }
+}

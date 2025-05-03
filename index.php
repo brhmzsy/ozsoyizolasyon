@@ -26,19 +26,19 @@
                                 <rs-slide data-key="rs-1" data-title="Slide" data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;"> <img src="/content/renovate4/images/reno4-slider-bg.png" class="rev-slidebg">
 
                                     <rs-layer id="slider-1-slide-1-layer-0" data-type="text" data-color="#10293d" data-rsp_ch="on" data-xy="x:l,l,c,c;xo:80px,80px,1px,1px;y:m;yo:-146px,-146px,-190px,-190px;"
-                                              data-text="w:normal;s:70,70,84,84;l:80,80,77,77;fw:700;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_999="o:0;st:w;"
+                                              data-text="w:normal;s:40,40,84,84;l:40,40,77,77;fw:700;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_999="o:0;st:w;"
                                               style="z-index:9;font-family:Comfortaa;">
-                                        <span style="background: #ffd800;">Yalıtımda Güvenceniz, <br>Binanızda Gücünüz Biziz.</span>
+                                        <span style="background: #ffd800;">Yalıtımda <br>Güvenceniz, <br>Binanızda <br>Gücünüz Biziz.</span>
                                     </rs-layer>
 
-                                    <a id="slider-1-slide-1-layer-1" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
+                                    <a id="slider-1-slide-1-layer-1" class="rs-layer facebook_index_btn" href="#" target="_blank" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
                                        data-xy="x:l,l,c,c;xo:259px,259px,-70px,-70px;y:m,m,b,b;yo:245px,245px,50px,50px;" data-text="w:normal;s:17,17,16,16;l:50,50,48,48;a:center;"
                                        data-dim="w:50px,50px,48px,48px;" data-border="bor:25px,25px,25px,25px;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;"
-                                       data-frame_999="o:0;st:w;" style="z-index:14;background-color:#f2f2f2;font-family:Open Sans;cursor:pointer; left: 120px !important;">
+                                       data-frame_999="o:0;st:w;" style="z-index:14;background-color:#f2f2f2;font-family:Open Sans;cursor:pointer;">
                                         <i class="icon-facebook"></i>
                                     </a>
 
-                                    <a id="slider-1-slide-1-layer-2" class="rs-layer rev-btn" href="/content/renovate4/contact.php" target="_self" rel="nofollow" data-type="button" data-color="#10293d"
+                                    <a id="slider-1-slide-1-layer-2" class="rs-layer rev-btn" href="/iletisim" target="_self" rel="nofollow" data-type="button" data-color="#10293d"
                                        data-rsp_ch="on" data-xy="x:l,l,c,c;xo:78px,78px,0,78px;yo:539px,539px,309px,309px;" data-text="w:normal;s:16,16,18,18;l:40,40,52,52;fw:700;"
                                        data-dim="minh:0px,0px,none,0px;" data-padding="t:4;r:40,40,52,52;b:4;l:40,40,52,52;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;"
                                        data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_999="o:0;st:w;" data-frame_hover="c:#fff;bgc:#10293d;bor:0px,0px,0px,0px;bri:120%;" style="z-index:15;background-color:#ffd800;font-family:Open Sans;">
@@ -60,7 +60,7 @@
                                         <br> Randevusuz da uğrayabilirsiniz!
                                     </rs-layer>
 
-                                    <a id="slider-1-slide-1-layer-9" class="rs-layer" href="#" target="_self" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
+                                    <a id="slider-1-slide-1-layer-9" class="rs-layer" href="#" target="_blank" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
                                        data-xy="x:l,l,c,c;xo:319px,319px,0,319px;y:m,m,b,b;yo:245px,245px,50px,50px;" data-text="w:normal;s:17,17,16,16;l:50,50,49,49;a:center;" data-dim="w:50px,50px,49px,49px;"
                                        data-border="bor:25px,25px,25px,25px;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_999="o:0;st:w;" style="z-index:12;background-color:#f2f2f2;font-family:Open Sans;cursor:pointer;">
                                         <i class="icon-instagram"></i>
@@ -87,7 +87,7 @@
 							<h3>Özsoy İzolasyon, 2004 yılından bu yana izolasyon sektöründe uzman kadrosu ve yenilikçi çözümleriyle hizmet vermektedir.</h3>
 							<p>Sprey poliüretan köpük, polyurea su yalıtımı, ısı, nem ve rutubet izolasyonu gibi alanlarda, uzun ömürlü ve etkili uygulamalar sunarak hem konutlarda
                                 hem sanayi yapılarında güven inşa eder. Kalite, güven ve müşteri memnuniyetini temel alan firmamız, her projeye özel çözümler üretir ve işini titizlikle tamamlar.</p>
-							<hr class="no_line" style="margin:0 auto 20px"> <a class="button button_size_2" href="/content/renovate4/about.php"><span class="button_label">Hakkımızda</span></a> </div>
+							<hr class="no_line" style="margin:0 auto 20px"> <a class="button button_size_2" href="/hakkimizda"><span class="button_label">Hakkımızda</span></a> </div>
 					</div>
 				</div>
 			</div>
@@ -112,7 +112,7 @@
 										<h3>Sprey Poliüretan Köpük</h3>
 										<p>Günümüzde enerji tasarrufu ve yapı sağlığı için en etkili çözümlerden biri olan sprey poliüretan köpük, sıvı halde püskürtülerek uygulanan,
                                             uygulandığı yüzeye %100 yapışan ve boşluk bırakmayan bir yalıtım sistemidir.</p>
-										<h5 style="text-decoration: underline;"><a href="/content/renovate4/contact.php">Bizimle İletişime Geçin</a></h5>
+										<h5 style="text-decoration: underline;"><a href="/iletisim">Bizimle İletişime Geçin</a></h5>
                                     </div>
 								</div>
 							</div>
@@ -126,7 +126,7 @@
 										<h3>Sprey Polyurea</h3>
 										<p>Polyurea, su yalıtımında kullanılan en dayanıklı ve ileri teknoloji malzemelerden biridir. Özellikle endüstriyel çatılar, su depoları, otoparklar, teraslar, havuzlar ve zemin
                                             kaplamalarında kullanılır. Sprey olarak yüzeye püskürtülen polyurea, uygulandığı yüzeyle bütünleşir ve eksiz, dikişsiz, çatlamaya karşı dirençli bir tabaka oluşturur.</p>
-                                        <h5 style="text-decoration: underline;"><a href="/content/renovate4/contact.php">Bizimle İletişime Geçin</a></h5>
+                                        <h5 style="text-decoration: underline;"><a href="/iletisim">Bizimle İletişime Geçin</a></h5>
                                     </div>
 								</div>
 							</div>
@@ -140,7 +140,7 @@
 										<h3>Sprey Püskürtme İzolasyon</h3>
 										<p>Sprey püskürtme izolasyon, modern yapı teknolojilerinin vazgeçilmezlerinden biridir. Sıvı olarak özel cihazlarla püskürtülen izolasyon malzemesi,
                                             uygulandığı alanda şişerek köpük formuna dönüşür ve tüm boşlukları doldurarak sızdırmaz bir tabaka oluşturur.</p>
-                                        <h5 style="text-decoration: underline;"><a href="/content/renovate4/contact.php">Bizimle İletişime Geçin</a></h5>
+                                        <h5 style="text-decoration: underline;"><a href="/iletisim">Bizimle İletişime Geçin</a></h5>
                                     </div>
 								</div>
 							</div>
@@ -159,7 +159,7 @@
 								</div>
 								<div class="col-md-3">
 									<div class="text-left mobile_align_center" style="padding:6px 0%;">
-                                        <a class="button button_full_width button_size_2" href="content/renovate4/services-pricing.php" style="background-color:#FFD800!important;color:#10293D;width:100%">
+                                        <a class="button button_full_width button_size_2" href="/hizmetlerimiz" style="background-color:#FFD800!important;color:#10293D;width:100%">
                                             <span class="button_label">Hizmetlerimiz</span>
                                         </a>
                                     </div>
@@ -169,7 +169,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="section mcb-section full-width" style="padding-top:55px;padding-bottom:70px;background-image:url(content/renovate4/images/reno4-home-graybg.png);background-repeat:repeat-y;background-position:center top">
+			<div class="section mcb-section full-width" style="padding-top:55px;padding-bottom:70px;background-image:url(/content/renovate4/images/reno4-home-graybg.png);background-repeat:repeat-y;background-position:center top">
 				<div class="row">
 					<div class="col-12">
 						<div class="column_attr clearfix align_center" style="padding:20px 0 30px 0;">
@@ -194,7 +194,7 @@
 					<div class="col-12">
 						<hr class="no_line" style="margin: 0 auto 40px auto" /> </div>
 					<div class="col-12">
-						<div class="button_align align_center"> <a class="button button_size_2" href="content/renovate4/realizations.php"><span class="button_label">Projelerimizi Görün</span></a> </div>
+						<div class="button_align align_center"> <a class="button button_size_2" href="/projelerimiz"><span class="button_label">Projelerimizi Görün</span></a> </div>
 					</div>
 					<div class="col-12">
 						<div class="column_attr clearfix align_center" style="padding:40px 0 0;">
@@ -213,19 +213,9 @@
         <?php include SAYFA . '/temel/footer.php'; ?>
 
 	</div>
-	<div id="Side_slide" class="right light" data-width="250">
-		<div class="close-wrapper"> <a href="#" class="close"><i class="icon-cancel-fine"></i></a> </div>
-		<div class="extras"> <a href="https://1.envato.market/9ZxXY" class="action_button" target="_blank">Buy now</a>
-			<div class="extras-wrapper"></div>
-		</div>
-		<div class="menu_wrapper"></div>
-		<ul class="social">
-			<li class="facebook"> <a href="#" title="Facebook"><i class="icon-facebook"></i></a> </li>
-			<li class="linkedin"> <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a> </li>
-			<li class="pinterest"> <a href="#" title="Pinterest"><i class="icon-pinterest"></i></a> </li>
-			<li class="instagram"> <a href="#" title="Instagram"><i class="icon-instagram"></i></a> </li>
-		</ul>
-	</div>
+
+    <?php include SAYFA . '/temel/footer_alt.php'; ?>
+
 	<div id="body_overlay"></div>
 	<!-- JS -->
 	<script src="js/jquery-3.6.0.min.js"></script>

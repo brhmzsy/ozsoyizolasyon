@@ -58,7 +58,7 @@
 						</div>
 						<div class="col-md-6">
 							<div class="image_frame image_item no_link scale-with-grid no_border">
-								<div class="image_wrapper"><img class="scale-with-grid" src="images/reno4-contact-dude.png" alt="reno4-contact-dude" title="" width="646" height="753" /> </div>
+								<div class="image_wrapper"><img class="scale-with-grid" src="/content/renovate4/images/reno4-contact-dude.png" alt="reno4-contact-dude" title="" width="646" height="753" /> </div>
 							</div>
 						</div>
 					</div>
@@ -99,19 +99,9 @@
         <?php include SAYFA . '/temel/footer.php'; ?>
 
 	</div>
-	<div id="Side_slide" class="right light" data-width="250">
-		<div class="close-wrapper"> <a href="#" class="close"><i class="icon-cancel-fine"></i></a> </div>
-		<div class="extras"> <a href="https://1.envato.market/9ZxXY" class="action_button" target="_blank">Buy now</a>
-			<div class="extras-wrapper"></div>
-		</div>
-		<div class="menu_wrapper"></div>
-		<ul class="social">
-			<li class="facebook"> <a href="#" title="Facebook"><i class="icon-facebook"></i></a> </li>
-			<li class="linkedin"> <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a> </li>
-			<li class="pinterest"> <a href="#" title="Pinterest"><i class="icon-pinterest"></i></a> </li>
-			<li class="instagram"> <a href="#" title="Instagram"><i class="icon-instagram"></i></a> </li>
-		</ul>
-	</div>
+
+    <?php include SAYFA . '/temel/footer_alt.php'; ?>
+
 	<div id="body_overlay"></div>
 	<!-- JS -->
 	<script src="../../js/jquery-3.6.0.min.js"></script>

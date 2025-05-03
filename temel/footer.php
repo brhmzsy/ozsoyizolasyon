@@ -15,10 +15,10 @@
             <div class="col-md-4">
                 <h4>Hızlı linkler</h4>
                 <hr class="no_line" style="margin: 0 auto 10px auto" /> <a href="/">Anasayfa</a>
-                <br> <a href="/content/renovate4/about.php">Hakkımızda</a>
-                <br> <a href="/content/renovate4/realizations.php">Projelerimizi Görün</a>
-                <br> <a href="/content/renovate4/services-pricing.php">Hizmetlerimiz</a>
-                <br> <a href="/content/renovate4/contact.php">İletişim</a> </div>
+                <br> <a href="/hakkimizda">Hakkımızda</a>
+                <br> <a href="/projelerimiz">Projelerimizi Görün</a>
+                <br> <a href="/hizmetlerimiz">Hizmetlerimiz</a>
+                <br> <a href="/iletisim">İletişim</a> </div>
             <div class="col-md-4">
                 <h4>Bizimle İletişime Geçin</h4>
                 <hr class="no_line" style="margin: 0 auto 10px auto" />
@@ -36,8 +36,8 @@
             <div class="column one"> <a id="back_to_top" class="footer_button" href="#"><i class="icon-up-open-big"></i></a>
                 <div class="copyright"> &copy; <?php echo date('Y') ?> - İzo Özsoy İzolasyon - <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/ibrahim-%C3%B6zsoy-67b63b184/">brhmzsy</a> </div>
                 <ul class="social">
-                    <li class="facebook"> <a href="https://www.facebook.com/profile.php?id=100064777278105" title="Facebook"><i class="icon-facebook"></i></a> </li>
-                    <li class="instagram"> <a href="https://www.instagram.com/izolasyon.ozsoy/" title="Instagram"><i class="icon-instagram"></i></a> </li>
+                    <li class="facebook"> <a href="https://www.facebook.com/profile.php?id=100064777278105" title="Facebook" target="_blank"><i class="icon-facebook"></i></a> </li>
+                    <li class="instagram"> <a href="https://www.instagram.com/izolasyon.ozsoy/" title="Instagram" target="_blank"><i class="icon-instagram"></i></a> </li>
                 </ul>
             </div>
         </div>

@@ -22,7 +22,7 @@
         </div>
 
         <div id="Content">
-			<div class="section" style="padding-top:200px;background-image:url(images/reno4-about-workers.png);background-repeat:no-repeat;background-position:center top">
+			<div class="section" style="padding-top:200px;background-image:url(/content/renovate4/images/reno4-about-workers.png);background-repeat:no-repeat;background-position:center top">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5">
@@ -43,7 +43,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="image_frame image_item no_link scale-with-grid no_border">
-								<div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="images/sprey-poliuretan-kopuk.jpg" alt="reno4-home-icon1" title="" /> </div>
+								<div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="/content/renovate4/images/sprey-poliuretan-kopuk.jpg" alt="reno4-home-icon1" title="" /> </div>
 							</div>
 						</div>
 						<div class="col-md-6" style="padding:2% 30px">
@@ -58,7 +58,7 @@
 
                                         <hr style="margin: 0 auto 40px auto" />
 
-                                        <h4 style="text-decoration: underline;"><a href="/content/renovate4/contact.php">Bizimle İletişime Geçin</a></h4>
+                                        <h4 style="text-decoration: underline;"><a href="/iletisim">Bizimle İletişime Geçin</a></h4>
 									</div>
 								</div>
 							</div>
@@ -79,12 +79,12 @@
                                     kullanıma hazır hâle gelir.</p></p>
 								<hr style="margin: 0 auto 40px auto" />
 
-                                <h4 style="text-decoration: underline;"><a href="/content/renovate4/contact.php">Bizimle İletişime Geçin</a></h4>
+                                <h4 style="text-decoration: underline;"><a href="/iletisim">Bizimle İletişime Geçin</a></h4>
                             </div>
 						</div>
                         <div class="col-md-6">
                             <div class="image_frame image_item no_link scale-with-grid no_border">
-                                <div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="images/polyurea-kaplama.jpg" alt="reno4-offer-painting" title="" /> </div>
+                                <div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="/content/renovate4/images/polyurea-kaplama.jpg" alt="reno4-offer-painting" title="" /> </div>
                             </div>
                         </div>
 					</div>
@@ -96,7 +96,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="image_frame image_item no_link scale-with-grid no_border">
-								<div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="images/sprey-puskurtme-izolasyon.jpg" alt="reno4-home-icon1" title="" /> </div>
+								<div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="/content/renovate4/images/sprey-puskurtme-izolasyon.jpg" alt="reno4-home-icon1" title="" /> </div>
 							</div>
 						</div>
 						<div class="col-md-6" style="padding:2% 30px">
@@ -118,7 +118,7 @@
                                 <div class="col-12">
                                     <hr style="margin: 30px auto 40px auto" />
 
-                                    <h4 style="text-decoration: underline;"><a href="/content/renovate4/contact.php">Bizimle İletişime Geçin</a></h4>
+                                    <h4 style="text-decoration: underline;"><a href="/iletisim">Bizimle İletişime Geçin</a></h4>
                                 </div>
 							</div>
 						</div>
@@ -141,14 +141,14 @@
                                             garanti altına alıyoruz.</p>
                                         <hr style="margin: 0 auto 40px auto" />
 
-                                        <h4 style="text-decoration: underline;"><a href="/content/renovate4/contact.php">Bizimle İletişime Geçin</a></h4>
+                                        <h4 style="text-decoration: underline;"><a href="/iletisim">Bizimle İletişime Geçin</a></h4>
 									</div>
 								</div>
 							</div>
 						</div>
                         <div class="col-md-6">
                             <div class="image_frame image_item no_link scale-with-grid no_border">
-                                <div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="images/su-yalitimi.jpg" alt="reno4-home-icon1" title=""  /> </div>
+                                <div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="/content/renovate4/images/su-yalitimi.jpg" alt="reno4-home-icon1" title=""  /> </div>
                             </div>
                         </div>
 					</div>
@@ -160,7 +160,7 @@
 					<div class="row">
                         <div class="col-md-6">
                             <div class="image_frame image_item no_link scale-with-grid no_border">
-                                <div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="images/mantolama.png" alt="reno4-offer-painting" title="" width="470" height="780" /> </div>
+                                <div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="/content/renovate4/images/mantolama.png" alt="reno4-offer-painting" title="" width="470" height="780" /> </div>
                             </div>
                         </div>
 						<div class="col-md-6" style="padding:3% 30px">
@@ -172,7 +172,7 @@
                                     cepheyi de çevresel etkenlerden korur. Uyguladığımız mantolama sistemleri uzun ömürlü ve çevre dostudur.</p>
 								<hr style="margin: 0 auto 40px auto" />
 
-                                <h4 style="text-decoration: underline;"><a href="/content/renovate4/contact.php">Bizimle İletişime Geçin</a></h4>
+                                <h4 style="text-decoration: underline;"><a href="/iletisim">Bizimle İletişime Geçin</a></h4>
                             </div>
 						</div>
 					</div>
@@ -192,14 +192,14 @@
                                             çatıların uzun ömürlü olmasını sağlarız. Çatıdan su sızdıran, ısı kaçıran veya estetik açıdan sorunlu çatı sistemlerini profesyonel şekilde yeniliyoruz.</p>
                                         <hr style="margin: 0 auto 40px auto" />
 
-                                        <h4 style="text-decoration: underline;"><a href="/content/renovate4/contact.php">Bizimle İletişime Geçin</a></h4>
+                                        <h4 style="text-decoration: underline;"><a href="/iletisim">Bizimle İletişime Geçin</a></h4>
 									</div>
 								</div>
 							</div>
 						</div>
                         <div class="col-md-6">
                             <div class="image_frame image_item no_link scale-with-grid no_border">
-                                <div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="images/cati-kaplama-ve-izolasyonu.jpg" alt="reno4-home-icon3" title="" width="470" height="780" /> </div>
+                                <div class="image_wrapper"><img class="scale-with-grid hizmet_img" src="/content/renovate4/images/cati-kaplama-ve-izolasyonu.jpg" alt="reno4-home-icon3" title="" width="470" height="780" /> </div>
                             </div>
                         </div>
 					</div>
@@ -213,19 +213,9 @@
         <?php include SAYFA . '/temel/footer.php'; ?>
 
 	</div>
-	<div id="Side_slide" class="right light" data-width="250">
-		<div class="close-wrapper"> <a href="#" class="close"><i class="icon-cancel-fine"></i></a> </div>
-		<div class="extras"> <a href="https://1.envato.market/9ZxXY" class="action_button" target="_blank">Buy now</a>
-			<div class="extras-wrapper"></div>
-		</div>
-		<div class="menu_wrapper"></div>
-		<ul class="social">
-			<li class="facebook"> <a href="#" title="Facebook"><i class="icon-facebook"></i></a> </li>
-			<li class="linkedin"> <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a> </li>
-			<li class="pinterest"> <a href="#" title="Pinterest"><i class="icon-pinterest"></i></a> </li>
-			<li class="instagram"> <a href="#" title="Instagram"><i class="icon-instagram"></i></a> </li>
-		</ul>
-	</div>
+
+    <?php include SAYFA . '/temel/footer_alt.php'; ?>
+
 	<div id="body_overlay"></div>
 	<!-- JS -->
 	<script src="../../js/jquery-3.6.0.min.js"></script>

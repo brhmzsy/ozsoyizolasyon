@@ -15,10 +15,10 @@
                             <nav id="menu">
                                 <ul id="menu-main-menu" class="menu menu-main">
                                     <li class=" current-menu-item page_item current_page_item"> <a href="/"><span>Anasayfa</span></a> </li>
-                                    <li> <a href="/content/renovate4/about.php"><span>Hakkımızda</span></a> </li>
-                                    <li> <a href="/content/renovate4/realizations.php"><span>Projelerimizi Görün</span></a> </li>
-                                    <li> <a href="/content/renovate4/services-pricing.php"><span>Hizmetlerimiz</span></a> </li>
-                                    <li> <a href="/content/renovate4/contact.php"><span>İletişim</span></a> </li>
+                                    <li> <a href="/hakkimizda"><span>Hakkımızda</span></a> </li>
+                                    <li> <a href="/projelerimiz"><span>Projelerimizi Görün</span></a> </li>
+                                    <li> <a href="/hizmetlerimiz"><span>Hizmetlerimiz</span></a> </li>
+                                    <li> <a href="/iletisim"><span>İletişim</span></a> </li>
                                 </ul>
                             </nav><a class="responsive-menu-toggle" href="#"><i class="icon-menu-fine"></i></a> </div>
                     </div>

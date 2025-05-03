@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+# .php uzantılarını gizle
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+
+# Özel yönlendirmeler (Türkçe URL → Orijinal PHP dosyası)
+RewriteRule ^hakkimizda$ /content/renovate4/about.php [L]
+RewriteRule ^projelerimiz$ /content/renovate4/realizations.php [L]
+RewriteRule ^hizmetlerimiz$ /content/renovate4/services-pricing.php [L]
+RewriteRule ^iletisim$ /content/renovate4/contact.php [L]
