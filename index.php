@@ -31,7 +31,7 @@
                                         <span style="background: #ffd800;">Yalıtımda <br>Güvenceniz, <br>Binanızda <br>Gücünüz Biziz.</span>
                                     </rs-layer>
 
-                                    <a id="slider-1-slide-1-layer-1" class="rs-layer facebook_index_btn" href="#" target="_blank" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
+                                    <a id="slider-1-slide-1-layer-1" class="rs-layer facebook_index_btn" href="https://www.facebook.com/profile.php?id=100064777278105" target="_blank" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
                                        data-xy="x:l,l,c,c;xo:259px,259px,-70px,-70px;y:m,m,b,b;yo:245px,245px,50px,50px;" data-text="w:normal;s:17,17,16,16;l:50,50,48,48;a:center;"
                                        data-dim="w:50px,50px,48px,48px;" data-border="bor:25px,25px,25px,25px;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;"
                                        data-frame_999="o:0;st:w;" style="z-index:14;background-color:#f2f2f2;font-family:Open Sans;cursor:pointer;">
@@ -60,7 +60,7 @@
                                         <br> Randevusuz da uğrayabilirsiniz!
                                     </rs-layer>
 
-                                    <a id="slider-1-slide-1-layer-9" class="rs-layer" href="#" target="_blank" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
+                                    <a id="slider-1-slide-1-layer-9" class="rs-layer" href="https://www.instagram.com/izolasyon.ozsoy/" target="_blank" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
                                        data-xy="x:l,l,c,c;xo:319px,319px,0,319px;y:m,m,b,b;yo:245px,245px,50px,50px;" data-text="w:normal;s:17,17,16,16;l:50,50,49,49;a:center;" data-dim="w:50px,50px,49px,49px;"
                                        data-border="bor:25px,25px,25px,25px;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_999="o:0;st:w;" style="z-index:12;background-color:#f2f2f2;font-family:Open Sans;cursor:pointer;">
                                         <i class="icon-instagram"></i>

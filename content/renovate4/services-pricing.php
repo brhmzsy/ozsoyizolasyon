@@ -69,7 +69,7 @@
 
 			<div class="section" style="padding-top:60px; padding-bottom:100px;">
 				<div class="container">
-					<div class="row">
+					<div class="row mobilde_ters_don">
 						<div class="col-md-6" style="padding:3% 30px">
 							<div class="column_attr clearfix mobile_align_center" style="padding:20px 0% 0px 2%;">
 								<h2>Sprey Polyurea ile Su Yalıtımı</h2>
@@ -128,7 +128,7 @@
 
             <div class="section" style="padding-top:60px; padding-bottom:100px;">
 				<div class="container">
-					<div class="row">
+					<div class="row mobilde_ters_don">
 						<div class="col-md-6" style="padding:2% 30px">
 							<div class="row">
 								<div class="col-12">
@@ -180,7 +180,7 @@
 			</div>
 			<div class="section" style="padding-top:60px; padding-bottom:100px;">
 				<div class="container">
-					<div class="row">
+					<div class="row mobilde_ters_don">
 						<div class="col-md-6" style="padding:3% 30px">
 							<div class="row">
 								<div class="col-12">

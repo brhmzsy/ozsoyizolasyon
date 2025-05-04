@@ -14,6 +14,10 @@
     left: 120px !important;
 }
 
+.mobilde_ters_don{
+    flex-direction: column;
+}
+
 @media only screen and (max-width: 768px) {
     .hizmet_img {
         height: 350px !important;
@@ -33,5 +37,9 @@
 
     .rev-btn{
         margin-top: 20px !important;
+    }
+
+    .mobilde_ters_don{
+        flex-direction: column-reverse;
     }
 }
