@@ -10,14 +10,14 @@
 <html class="no-js">
 <!--<![endif]-->
 
-<?php include SAYFA . '/temel/head.php'; ?>
+<?php include '../../temel/head.php'; ?>
 
 <body class="page style-simple button-custom layout-full-width if-zoom if-border-hide no-content-padding header-transparent header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menuo-right menuo-no-borders mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-header-mini mobile-sticky">
 	<div id="Wrapper">
 
         <div id="Header_wrapper">
             <header id="Header">
-                <?php include SAYFA . '/temel/menu.php'; ?>
+                <?php include '../../temel/menu.php'; ?>
             </header>
         </div>
 
@@ -122,15 +122,15 @@
 				</div>
 			</div>
 
-            <?php include SAYFA . '/temel/footer_ust.php'; ?>
+            <?php include '../../temel/footer_ust.php'; ?>
 
 		</div>
 
-        <?php include SAYFA . '/temel/footer.php'; ?>
+        <?php include '../../temel/footer.php'; ?>
 
 	</div>
 
-    <?php include SAYFA . '/temel/footer_alt.php'; ?>
+    <?php include '../../temel/footer_alt.php'; ?>
 
 	<div id="body_overlay"></div>
 	<!-- JS -->

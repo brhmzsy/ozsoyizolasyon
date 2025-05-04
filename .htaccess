@@ -1,13 +1,22 @@
 RewriteEngine On
 RewriteBase /
 
-# .php uzantılarını gizle
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+# 1. HTTP → HTTPS yönlendirmesi
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Özel yönlendirmeler (Türkçe URL → Orijinal PHP dosyası)
+# 2. Eski sayfaları yeni sayfalara yönlendir (HTTPS ile)
+Redirect 301 /hakkimizda/ https://ozsoyizolasyon.com/hakkimizda
+Redirect 301 /galeri/ https://ozsoyizolasyon.com/projelerimiz
+Redirect 301 /iletisim/ https://ozsoyizolasyon.com/iletisim
+
+# 3. URL routing: Türkçe URL → PHP dosyası
 RewriteRule ^hakkimizda$ /content/renovate4/about.php [L]
 RewriteRule ^projelerimiz$ /content/renovate4/realizations.php [L]
 RewriteRule ^hizmetlerimiz$ /content/renovate4/services-pricing.php [L]
 RewriteRule ^iletisim$ /content/renovate4/contact.php [L]
+
+# 4. .php uzantılarını gizle
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
