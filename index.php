@@ -82,7 +82,7 @@
 			<div class="section mcb-section no-margin-h equal-height-wrap bg-cover" style="padding-bottom:50px;background-image:url(content/renovate4/images/reno4-home-homes-bg.png);background-repeat:no-repeat;background-position:center top">
 				<div class="container">
 					<div class="row no-gutters">
-						<div class="col-md-6"> <img src="content/renovate4/images/reno4-home-team.png" alt="reno4-home-team" title="" width="780" height="780" /> </div>
+						<div class="col-md-6"> <img src="/content/renovate4/images/izo_ozsoy_izolasyon_hakkimizda.jpeg" class="hizmet_img" alt="reno4-home-team" title="" width="780" height="780" /> </div>
 						<div class="col-md-6" style="padding:50px 6%;background-color:#ffd800;background-image:url(content/renovate4/images/reno4-smallbg-1.png);background-repeat:no-repeat;background-position:right bottom">
 							<h3>Özsoy İzolasyon, 2004 yılından bu yana izolasyon sektöründe uzman kadrosu ve yenilikçi çözümleriyle hizmet vermektedir.</h3>
 							<p>Sprey poliüretan köpük, polyurea su yalıtımı, ısı, nem ve rutubet izolasyonu gibi alanlarda, uzun ömürlü ve etkili uygulamalar sunarak hem konutlarda
