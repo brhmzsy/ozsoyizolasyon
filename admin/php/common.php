@@ -165,9 +165,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="blank8.php">
+					<a href="blank7.php">
 						<i class="icon-dashboard"></i>
-						<span>Ürün Sayf. Düzenle</span>
+						<span>Kategoriler</span>
 					</a>
 				</li>
 			';
@@ -255,50 +255,30 @@
 			</div>
 		';
 	}
-function urun_duzenle($lan){
+function kategoriler(){
 
 	global $con;
 
-	$sql = $con->rawQuery("SELECT * FROM products WHERE language = '$lan' ");
+	$sql = $con->rawQuery("SELECT * FROM categories");
 	$i = 1;
-
-	if($lan == "ar"){
-		$baslik = "Arapça Ürünler listesi";
-		$para = "$";
-	}else if($lan == "fr"){
-		$baslik = "Fransızca Ürünler listesi";
-		$para = "€";
-	}else if($lan == "es"){
-		$baslik = "İspanyolca Ürünler listesi";
-		$para = "€";
-	}else if($lan == "en"){
-		$baslik = "İngilizce Ürünler listesi";
-		$para = "$";
-	}else{
-		$baslik = "Türkçe Ürünler listesi";
-		$para = "₺";
-	}
 
 	echo '
 			<div class="row">
 				<div class="col-lg-12">
 					<section class="panel">
 						<header class="panel-heading" style="display: flex; justify-content: space-between;">
-							<span>Ürünler - '.$baslik.'</span>
-							<a id="yeni_urun" data-toggle="modal" href="#urunModal" class="btn btn-primary">Yeni Ürün Ekle</a>
+							<span>Kategori Düzenle</span>
+							<a id="yeni_kategori" data-toggle="modal" href="#kategoriModal" class="btn btn-primary">Yeni Kategori Ekle</a>
 						</header>
 						<table class="table table-striped table-advance table-hover">
 							<thead>
 							<tr>
 								<th style="width: 75px">Sıra</th>
-								<th style="width: 200px"><i class="icon-bullhorn"></i> Ürün Adı</th>
-								<th style="width: 200px"><i class="icon-bullhorn"></i> Ürün Türü</th>
-								<th style="width: 200px"><i class="icon-bullhorn"></i> Ürün Kodu</th>
-								<th style="width: 200px"><i class="icon-bullhorn"></i> Ürün Size</th>
-								<th style="width: 200px"><i class="icon-bullhorn"></i> Ürün Resim Adı</th>
-								<th style="width: 200px"><i class="icon-bullhorn"></i> Beyaz</th>
-								<th style="width: 200px"><i class="icon-bullhorn"></i> Renkli</th>
-								<th style="width: 200px"><i class="icon-bullhorn"></i> Cam</th>
+								<th style="width: 200px"><i class="icon-bullhorn"></i> Resim </th>
+								<th style="width: 200px"><i class="icon-bullhorn"></i> Başlık</th>
+								<th style="width: 600px"><i class="icon-bullhorn"></i> İçerik</th>
+								<th style="width: 100px"><i class="icon-bullhorn"></i> Gösterim Yönü</th>
+								<th style="width: 100px"><i class="icon-bullhorn"></i> Durumu</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -308,17 +288,32 @@ function urun_duzenle($lan){
 		echo '
 				<tr>
 					<td>
-						<a data-toggle="modal" href="#urunModal" class="urun_guncelle" data-id="'.$result["id"].'"><button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button></a>
+						<a data-toggle="modal" href="#kategoriModal" class="kategori_guncelle" data-id="'.$result["id"].'"><button class="btn btn-primary btn-xs"><i class="icon-pencil"></i></button></a>
 						'.$i.' 
 					</td>
-					<td>'.$result["name"].'</td>
-					<td>'.$result["type"].'</td>
-					<td>'.$result["kod"].'</td> 
-					<td>'.$result["size"].'</td>
-					<td>'.$result["images"].'</td>
-					<td>'.$result["price1"].' '.$para.'</td>
-					<td>'.$result["price2"].' '.$para.'</td>
-					<td>'.$result["price3"].' '.$para.'</td>
+					<td><img src="/admin/img/category/'.$result["resim"].'" height="100px;" /></td> 
+					<td>'.$result["baslik"].'</td>
+					<td>'.$result["icerik"].'</td>
+					<td>';
+
+			if ($result["gosterim_yonu"] == 1) {
+				echo "Resim solda";
+			} else {
+				echo "Resim sağda";
+			}
+
+		echo '		
+					</td>
+					<td>';
+
+		if ($result["durumu"] == 1) {
+			echo "Aktif";
+		} else {
+			echo "Pasif";
+		}
+
+		echo '		
+					</td>
 				</tr>
 			';
 		$i++;
@@ -328,115 +323,52 @@ function urun_duzenle($lan){
 							</tbody>
 						</table>
 						<!-- Modal -->
-						<div class="modal fade" id="urunModal" tabindex="-1" role="dialog" aria-labelledby="urunModalLabel" aria-hidden="true">
+						<div class="modal fade" id="kategoriModal" tabindex="-1" role="dialog" aria-labelledby="kategoriModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content" id="result">
                                         <form role="form" method="post" enctype="multipart/form-data">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Ürün Bilgisi</h4>
+                            <h4 class="modal-title">Kategori Bilgisi</h4>
                         </div>
                         <div class="modal-body">
 
                             <div class="form-group">
-                                <label for="type">Ürün Adı</label>
-                                <input type="text" class="form-control" id="stok_adi" value="" placeholder="Ürün Adı">
+                                <label for="type">Başlık</label>
+                                <input type="text" class="form-control" id="baslik" value="" placeholder="Başlık">
                             </div>
 
                             <div class="form-group">
-                                <label for="type">Ürün Türü</label>
-                                <select id="stok_turu" class="form-control">
-                                    <option value="1">Hazır Doğrama</option>
-                                    <option value="2">Plastik Pencere</option>
-                                    <option value="3">Kapı</option>
+                                <label for="type">İçerik</label>
+                                <input type="text" class="form-control" id="icerik" value="" placeholder="İçerik">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="type">Gösterim Yönü</label>
+                                <select id="gosterim_yonu" class="form-control">
+                                    <option value="1">Resim Solda</option>
+                                    <option value="2">Resim Sağda</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="type">Serisi</label>
-                                <input type="text" class="form-control" id="serisi" value="" placeholder="Serisi">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">Ürün Kodu</label>
-                                <input type="text" class="form-control" id="stok_kodu" value="" placeholder="Ürün Kodu">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">Kasa Kalınlığı</label>
-                                <input type="text" class="form-control" id="kasa_kalinligi" value="" placeholder="Kasa Kalınlığı">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">Kasa Renk</label>
-                                <input type="text" class="form-control" id="kasa_renk" value="" placeholder="Kasa Renk">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">Kanat Ölçü</label>
-                                <input type="text" class="form-control" id="kanat_olcu" value="" placeholder="Kanat Ölçü">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">Kanat Renk</label>
-                                <input type="text" class="form-control" id="kanat_renk" value="" placeholder="Kanat Renk">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="kol_modeli">Kol Modeli</label>
-                                <select id="kol_modeli" class="form-control">
-                                    <option value="1">Yok</option>
-                                    <option value="2">Normal</option>
-                                    <option value="3">Lüks</option>
+                                <label for="type">Durumu</label>
+                                <select id="durumu" class="form-control">
+                                    <option value="1">Aktif</option>
+                                    <option value="2">Pasif</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="montaj">Montaj</label>
-                                <select id="montaj" class="form-control">
-                                    <option value="1">Yok</option>
-                                    <option value="2">Var</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cam">Cam</label>
-                                <select id="cam" class="form-control">
-                                    <option value="1">Yok</option>
-                                    <option value="2">Var</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">Birim Fiyatı</label>
-                                <input type="number" class="form-control" id="birim_fiyat" value="" placeholder="Birim Fiyatı">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">İskonto Oran</label>
-                                <input type="number" class="form-control" id="iskonto_1_oran" value="" placeholder="İskonto Oran 1">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">Kdv Oranı</label>
-                                <input type="number" class="form-control" id="kdv_oran" value="" placeholder="Kdv Oranı">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">Açıklama</label>
-                                <input type="text" class="form-control" id="aciklama" value="" placeholder="Açıklama">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="type">Ürün Resim</label>
+                                <label for="type">Kategori Resim</label>
                                 <input type="file" name="resim" id="resim">
                             </div>
 
                         </div>
                         <div class="modal-footer">
                             <button data-dismiss="modal" class="btn btn-default modal_close" type="button">Kapat</button>
-                            <a data-toggle="modal" href="#urunSilModal"  class="btn btn-danger" type="button" id="urunu_sil" style="display: none;">Sil</a>
-                            <button class="btn btn-success" type="button" id="urun_kaydet">Kaydet</button>
+                            <a data-toggle="modal" href="#kategoriSilModal"  class="btn btn-danger" type="button" id="kategori_sil" style="display: none;">Sil</a>
+                            <button class="btn btn-success" type="button" id="kategori_kaydet">Kaydet</button>
                         </div>
                             </form>
                                     </div>
@@ -445,20 +377,20 @@ function urun_duzenle($lan){
                             
                             
                             
-                            <div class="modal fade" id="urunSilModal" tabindex="-1" role="dialog" aria-labelledby="urunSilModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="kategoriSilModal" tabindex="-1" role="dialog" aria-labelledby="kategoriSilModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content" id="result">
                                         <form role="form" method="post" enctype="multipart/form-data">
                         <div class="modal-header" style="background-color: #ff6c60;">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Ürün Sil</h4>
+                            <h4 class="modal-title">Kategori Sil</h4>
                         </div>
                         <div class="modal-body">
-                            <p>Ürününüz Silinsin mi?</p>
+                            <p>Kategoriniz Silinsin mi?</p>
                         </div>
                         <div class="modal-footer">
                             <button data-dismiss="modal" class="btn btn-default modal_close" type="button">Kapat</button>
-                            <button class="btn btn-danger" type="button" id="urun_sil">Sil</button>
+                            <button class="btn btn-danger" type="button" id="kategori_sil">Sil</button>
                         </div>
                             </form>
                                     </div>

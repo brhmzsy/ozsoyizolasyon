@@ -5,7 +5,7 @@
 //const SAYFA = "/public_html/ozsoyizolasyon/";
 const SAYFA = "";
 
-
+const VERSIYON = 1;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

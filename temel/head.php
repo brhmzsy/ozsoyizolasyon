@@ -1,3 +1,9 @@
+<?php
+
+include 'temel/ayarlar.php';
+
+?>
+
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
@@ -22,7 +28,7 @@
     <!--CSS -->
     <link rel='stylesheet' href='/content/renovate4/css/structure.css'>
     <link rel='stylesheet' href='/content/renovate4/css/renovate4.css'>
-    <link rel='stylesheet' href='/content/renovate4/css/style.css'>
+    <link rel='stylesheet' href='/content/renovate4/css/style.css<?php echo VERSIYON; ?>'>
     <!-- Revolution Slider -->
     <link rel="stylesheet" href="/plugins/rs-plugin-6.custom/css/rs6.css">
 </head>

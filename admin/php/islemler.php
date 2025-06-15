@@ -133,59 +133,25 @@
 
     if(isset($_POST["action"])){
 
-        if($_POST["action"] == "urun_kaydet") {
+        if($_POST["action"] == "kategori_kaydet") {
 
             $gelen = $_POST;
 
-            $stok_id = $gelen["stok_id"];
-            $stok_adi = $gelen["stok_adi"];
-            $stok_turu = $gelen["stok_turu"];
-            $serisi = $gelen["serisi"];
-            $stok_kodu = $gelen["stok_kodu"];
-            $kasa_kalinligi = $gelen["kasa_kalinligi"];
-            $kasa_renk = $gelen["kasa_renk"];
-            $kanat_olcu = $gelen["kanat_olcu"];
-            $kanat_renk = $gelen["kanat_renk"];
-            $kol_modeli = $gelen["kol_modeli"];
-            $montaj = $gelen["montaj"];
-            $cam = $gelen["cam"];
-            $birim_fiyat = $gelen["birim_fiyat"];
-            $iskonto_1_oran = $gelen["iskonto_1_oran"];
-            $kdv_oran = $gelen["kdv_oran"];
-            $aciklama = $gelen["aciklama"];
+            $kategori_id = $gelen["kategori_id"];
+            $baslik = $gelen["baslik"];
+            $icerik = $gelen["icerik"];
+            $gosterim_yonu = $gelen["gosterim_yonu"];
+            $type = $gelen["durumu"];
 
-            if(!is_numeric($birim_fiyat))
-                $birim_fiyat = 0;
-
-            if(!is_numeric($iskonto_1_oran))
-                $iskonto_1_oran = 0;
-
-            if(!is_numeric($kdv_oran))
-                $kdv_oran = 0;;
-
-            if(is_numeric($stok_id)) {
+            if(is_numeric($kategori_id)) {
 
                 try {
 
                     if(isset($_FILES["resim"]) && $_FILES["resim"]['error'] == 0) {
 
-                        switch ($stok_turu){
-                            case 2:
-                                $klasor_adi = "plastik-profil";
-                                break;
-                            case 3:
-                                $klasor_adi = "kapi";
-                                break;
-                            default:
-                                $klasor_adi = "hazir-profil";
-                                break;
-                        }
-
-                        $hedefKlasor = '../../content/print3/images/'.$klasor_adi."/";
+                        $hedefKlasor = '../img/category/';
 
                         // Geçici dosya yolunu al
-
-
                         $geciciDosya = $_FILES["resim"]['tmp_name'];
 
                         // Dosya adını al
@@ -194,8 +160,12 @@
                         // Hedef klasör yolunu ve dosya adını birleştirerek hedef yol oluştur
                         $hedefYol = $hedefKlasor . $dosyaAdi;
 
+                        if (!is_dir($hedefKlasor)) {
+                            mkdir($hedefKlasor, 0777, true);
+                        }
+
                         // Dosyayı hedef yola taşı
-                        if(copy($geciciDosya, $hedefYol)) {
+                        if(move_uploaded_file($_FILES['resim']['tmp_name'], $hedefYol)) {
                             $mesaj = "Dosya başarıyla yüklendi.";
                         } else {
                             $mesaj = "Dosya yükleme sırasında bir hata oluştu.";
@@ -205,25 +175,18 @@
                     }
 
 
-                    if ($stok_id == 0) {
-                        mysqli_query($con, "insert into products (type, name, kod, size, price1, price2, price3, 
-                                    language, kasa_kalinligi, kasa_renk, kanat_olcu, kanat_renk, kol_modeli, montaj, cam, 
-                                    iskonto_1_oran, kdv_oran, aciklama) values('$stok_turu', '$stok_adi', '$serisi', '$stok_kodu', 
-                                    '$birim_fiyat', '$birim_fiyat', '$birim_fiyat', 'tr', '$kasa_kalinligi', '$kasa_renk', 
-                                    '$kanat_olcu', '$kanat_renk', '$kol_modeli', '$montaj', '$cam', '$iskonto_1_oran', 
-                                    '$kdv_oran', '$aciklama')");
+                    if ($kategori_id == 0) {
+                        $con->rawQuery("insert into categories (baslik, icerik, gosterim_yonu, durumu) 
+                            values(?, ?, ?, ?)", [$baslik, $icerik, $gosterim_yonu, $type]);
 
-                        $stok_id = mysqli_insert_id($con);
+                        $kategori_id = $con->getInsertId();
                     } else {
-                        mysqli_query($con, "update products set type='$stok_turu', name='$stok_adi', kod='$serisi', 
-                                    size='$stok_kodu', price1='$birim_fiyat', price2='$birim_fiyat', price3='$birim_fiyat', 
-                                    kasa_kalinligi='$kasa_kalinligi', kasa_renk='$kasa_renk', kanat_olcu='$kanat_olcu', 
-                                    kanat_renk='$kanat_renk', kol_modeli='$kol_modeli', montaj='$montaj', cam='$cam', 
-                                    iskonto_1_oran='$iskonto_1_oran', kdv_oran='$kdv_oran', aciklama='$aciklama' where id='$stok_id'");
+                        $con->rawQuery("update categories set baslik=?, icerik=?, gosterim_yonu=?, durumu=? 
+                            where id=?", [$baslik, $icerik, $gosterim_yonu, $type, $kategori_id]);
                     }
 
                     if(!empty($dosyaAdi))
-                        mysqli_query($con, "update products set images='$dosyaAdi' where id='$stok_id' ");
+                        $con->rawQuery("update categories set resim=? where id=? ", [$dosyaAdi, $kategori_id]);
 
                     echo json_encode(["durum" => true]);
                 } catch (Exception $e) {
@@ -233,6 +196,24 @@
             }else
                 echo json_encode(["durum" => false]);
         }
+
+        if($_POST["action"] == "kategori_bilgi_getir") {
+
+            $gelen = $_POST["data"];
+
+            $id = $gelen["id"];
+
+            try {
+                $urun_bilgi = $con->rawQuery("select * from categories where id=? ", [$id])[0];
+
+                echo json_encode($urun_bilgi);
+
+            }catch (Exception $e){
+                $hata = $e->getMessage();
+                echo false;
+            }
+        }
+
     }
 
 

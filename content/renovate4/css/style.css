@@ -15,7 +15,7 @@
 }
 
 .mobilde_ters_don{
-    flex-direction: column;
+    flex-direction: row;
 }
 
 @media only screen and (max-width: 768px) {
