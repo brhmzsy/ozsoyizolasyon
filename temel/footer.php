@@ -1,3 +1,17 @@
+<?php
+
+include 'temel/ayarlar.php';
+
+$sayfa_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'f%' order by kod");
+
+require_once __DIR__ . '/../php/ArayuzDuzenleme.php';;
+
+$telefon_class = new ArayuzDuzenleme();
+
+$telefon = $telefon_class->temizleTelefon($sayfa_metinleri[2]['texttr']);
+
+?>
+
 <footer id="Footer" class="clearfix">
     <div class="container">
         <div class="row">
@@ -6,11 +20,9 @@
             <div class="col-md-4">
                 <h4>Adres</h4>
                 <hr class="no_line" style="margin: 0 auto 10px auto" />
-                <p> 50.yıl Mahallesi F caddesi
-                    <br> No.1 Sultangazi / İstanbul
-                    <br> 34265 </p>
+                <?php echo $sayfa_metinleri[0]['texttr']; ?>
                 <hr style="margin: 0 auto 10px auto" />
-                <p>Pazartesi — Cuma: 09:00 — 18:00</p>
+                <?php echo $sayfa_metinleri[1]['texttr']; ?>
             </div>
             <div class="col-md-4">
                 <h4>Hızlı linkler</h4>
@@ -22,7 +34,7 @@
             <div class="col-md-4">
                 <h4>Bizimle İletişime Geçin</h4>
                 <hr class="no_line" style="margin: 0 auto 10px auto" />
-                <h3><strong><a href="tel:05333913838">+90 533 391 38 38</a></strong></h3>
+                <h3><strong><a href="tel:<?php echo $telefon; ?>"><?php echo $sayfa_metinleri[2]['texttr']; ?></a></strong></h3>
 <!--                <hr class="no_line" style="margin: 0 auto 10px auto" />-->
 <!--                <p> If you have a question,-->
 <!--                    <br> please contact at <a href="#"><span>noreply@envato.com</span></a> </p>-->

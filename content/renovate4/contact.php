@@ -1,5 +1,18 @@
+<?php
 
-<?php include '../../temel/ayarlar.php'; ?>
+include '../../temel/ayarlar.php';
+
+$sayfa_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'p5%' order by kod");
+
+$footer_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'f%' order by kod");
+
+require_once __DIR__ . '/../../php/ArayuzDuzenleme.php';;
+
+$telefon_class = new ArayuzDuzenleme();
+
+$telefon = $telefon_class->temizleTelefon($footer_metinleri[2]['texttr']);
+
+?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -29,9 +42,8 @@
 							<div class="row">
 								<div class="col-12">
 									<div class="column_attr clearfix mobile_align_center">
-										<h1>Bizimle <br> İletişime Geçin</h1>
-										<p>Projelerinizle ilgili her türlü soru, teklif talebi ya da danışmanlık için bizimle kolayca iletişime geçebilirsiniz. Uzman ekibimiz en kısa sürede size
-                                            dönüş yapacak ve <strong>ihtiyacınıza en uygun çözümü</strong> sunacaktır. Gelin, birlikte sağlam temeller atalım.</p>
+                                        <?php echo $sayfa_metinleri[0]['texttr']; ?>
+                                        <?php echo $sayfa_metinleri[1]['texttr']; ?>
 									</div>
 								</div>
 <!--								<div class="col-12">-->
@@ -50,9 +62,9 @@
 									<div class="column_attr clearfix align_center">
 										<h2><i class="icon-phone" style="color:#626262"></i></h2> </div>
 								</div>
-								<div class="col-md-5">
+								<div class="col-md-10">
 									<div class="column_attr clearfix mobile_align_center" style="padding:7px 2% 20px;">
-										<h4 style="margin: 0;"><a href="tel:05333913838">+90 533 391 38 38</a></h4> </div>
+										<h4 style="margin: 0;"><a href="tel:<?php echo $telefon; ?>"><?php echo $footer_metinleri["2"]["texttr"]; ?></a></h4> </div>
 								</div>
 							</div>
 						</div>
@@ -84,8 +96,7 @@
 							<div class="col-12">
 								<hr style="margin:0 auto 25px;" /> </div>
 							<div class="col-12 text-center">
-								<p style="text-align: center;"> Bizi yerimizde ziyaret edebilir, detaylı bilgi alabilirsiniz.
-									<br> Randevusuz da uğrayabilirsiniz!</p>
+                                <?php echo $sayfa_metinleri[2]['texttr']; ?>
 								<hr class="no_line" style="margin: 0 auto 30px auto" />
                                 <a href="https://www.facebook.com/profile.php?id=100064777278105" class="icon_bar icon_bar_facebook icon_bar_large"><span class="t"><i class="icon-facebook"></i></span><span class="b"><i class="icon-facebook"></i></span></a>
                                 <a href="https://www.instagram.com/izolasyon.ozsoy/" class="icon_bar icon_bar_instagram icon_bar_large"><span class="t"><i class="icon-instagram"></i></span><span class="b"><i class="icon-instagram"></i></span></a>

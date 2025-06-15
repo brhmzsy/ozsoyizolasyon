@@ -1,5 +1,10 @@
+<?php
 
-<?php include '../../temel/ayarlar.php'; ?>
+include '../../temel/ayarlar.php';
+
+$sayfa_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'p2%' order by kod");
+
+?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -26,20 +31,15 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-5">
-							<h1>Hakkımızda <br> birkaç söz</h1>
+                            <?php echo $sayfa_metinleri[0]['texttr']; ?>
 							<hr class="no_line" style="margin: 0 auto 30px auto" />
-							<p>Özsoy İzolasyon, 2004 yılından bu yana yapı sektöründe izolasyon hizmetleri sunan güvenilir ve uzman bir firmadır. Sunduğumuz tüm hizmetlerde kalite,
-                                dayanıklılık ve müşteri memnuniyetini ön planda tutuyoruz. Alanında deneyimli kadromuz ile bireysel konutlardan sanayi tesislerine kadar her ölçekte
-                                yapıya özel yalıtım çözümleri sunmaktayız.</p>
+                            <?php echo $sayfa_metinleri[5]['texttr']; ?>
 						</div>
 						<div class="col-12">
 							<hr class="no_line" style="margin: 0 auto 175px auto" /> </div>
 						<div class="col-md-6">
 							<div class="column_attr clearfix" style="padding:40px 0% 0px;">
-								<h3>İzolasyon, bir yapının uzun ömürlü olması ve yaşam konforunun artırılması açısından büyük önem taşır. <span style="background: #ffd800;">Su sızıntıları,
-                                    ısı kayıpları, rutubet ve enerji israfı</span> gibi birçok sorunun kaynağında yetersiz yalıtım yer alır.
-                                    <span style="background: #ffd800;">Biz, bu tür problemleri en baştan önlemeyi hedefliyoruz.</span>
-                                    Uyguladığımız sistemlerle müşterilerimize sadece bugünü değil, yarını da koruyan çözümler sunuyoruz.</h3>
+                                <?php echo $sayfa_metinleri[6]['texttr']; ?>
                             </div>
 						</div>
 					</div>
@@ -53,9 +53,8 @@
 							<div class="row">
 								<div class="col-md-10">
 									<div class="column_attr clearfix" style="padding:30px 2%;">
-										<h3>Firmamız, yaptığı tüm işlerde kaliteli malzeme kullanımı ve titiz uygulama süreçleriyle öne çıkar. <span style="background: #ffd800;">Her projeyi kendi evimiz gibi benimseyerek çalışır,
-                                            işimizi zamanında ve eksiksiz teslim ederiz.</span> İster küçük bir apartman terası, ister büyük bir fabrika zemini olsun, her işe aynı ciddiyet ve
-                                            özenle yaklaşırız.</h3> </div>
+                                        <?php echo $sayfa_metinleri[7]['texttr']; ?>
+                                    </div>
 								</div>
 <!--								<div class="col-12">-->
 <!--									<div class="image_frame image_item no_link scale-with-grid no_border">-->
@@ -72,9 +71,8 @@
 					<div class="row">
 						<div class="col-md-9">
 							<div class="column_attr clearfix" style="padding:0px 5% 0px 0%;">
-                                <h3>Müşterilerimiz için <span style="background: #ffd800;">yalnızca bir hizmet değil, güvenli ve uzun ömürlü yapılar inşa ediyoruz.</span> Yalıtım sadece bir
-                                    uygulama değil, yaşam alanlarınızı koruyan görünmez bir kalkandır. Özsoy İzolasyon olarak her projede sürdürülebilirlik, enerji verimliliği ve teknik
-                                    doğruluğu esas alıyoruz. Bizimle çalışan herkes, sağlam yapılarla geleceğe bir adım önde başlar.</h3> </div>
+                                <?php echo $sayfa_metinleri[8]['texttr']; ?>
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -87,8 +85,10 @@
 								<div class="image_wrapper"><img class="scale-with-grid" src="/content/renovate4/images/reno4-about-icon1.png" alt="reno4-about-icon1" title="" width="125" height="300" /> </div>
 							</div>
 							<div class="column_attr clearfix" style="padding:55px 0% 0px;">
-								<div class="google_font" style="font-family:'Comfortaa',Arial,Tahoma,sans-serif;font-size:53px;line-height:53px;font-weight:700;letter-spacing:0px;color:#222222;"> <span class="counter-inline animate-math">+<span class="number" data-to="450">450</span></span></div>
-								<p>Tamamlanan Proje Sayısı</p>
+								<div class="google_font" style="font-family:'Comfortaa',Arial,Tahoma,sans-serif;font-size:53px;line-height:53px;font-weight:700;letter-spacing:0px;color:#222222;"> <span class="counter-inline animate-math">+<span class="number" data-to="<?php echo $sayfa_metinleri[9]['texttr']; ?>">
+                                        <?php echo $sayfa_metinleri[9]['texttr']; ?>
+                                        </span></span></div>
+                                <?php echo $sayfa_metinleri[10]['texttr']; ?>
 							</div>
 						</div>
 						<div class="col-md-3" style="padding:0 0 20px 0">
@@ -96,8 +96,8 @@
 								<div class="image_wrapper"><img class="scale-with-grid" src="/content/renovate4/images/reno4-about-icon2.png" alt="reno4-about-icon2" title="" width="125" height="300" /> </div>
 							</div>
 							<div class="column_attr clearfix" style="padding:55px 0% 0px;">
-								<div class="google_font" style="font-family:'Comfortaa',Arial,Tahoma,sans-serif;font-size:53px;line-height:53px;font-weight:700;letter-spacing:0px;color:#222222;"> <span class="counter-inline animate-math"><span class="number" data-to="20">20</span></span>+</div>
-								<p>Yıllık Tecrübe</p>
+								<div class="google_font" style="font-family:'Comfortaa',Arial,Tahoma,sans-serif;font-size:53px;line-height:53px;font-weight:700;letter-spacing:0px;color:#222222;"> <span class="counter-inline animate-math"><span class="number" data-to="<?php echo $sayfa_metinleri[11]['texttr']; ?>"><?php echo $sayfa_metinleri[11]['texttr']; ?></span></span>+</div>
+								<p><?php echo $sayfa_metinleri[12]['texttr']; ?></p>
 							</div>
 						</div>
 						<div class="col-md-3" style="padding:0 0 20px 0">
@@ -105,8 +105,8 @@
 								<div class="image_wrapper"><img class="scale-with-grid" src="/content/renovate4/images/reno4-about-icon3.png" alt="reno4-about-icon3" title="" width="125" height="300" /> </div>
 							</div>
 							<div class="column_attr clearfix" style="padding:55px 0% 0px;">
-								<div class="google_font" style="font-family:'Comfortaa',Arial,Tahoma,sans-serif;font-size:53px;line-height:53px;font-weight:700;letter-spacing:0px;color:#222222;"> <span class="counter-inline animate-math">+<span class="number" data-to="1200">1200</span></span></div>
-								<p>Memnun Müşteri</p>
+								<div class="google_font" style="font-family:'Comfortaa',Arial,Tahoma,sans-serif;font-size:53px;line-height:53px;font-weight:700;letter-spacing:0px;color:#222222;"> <span class="counter-inline animate-math">+<span class="number" data-to="<?php echo $sayfa_metinleri[1]['texttr']; ?>"><?php echo $sayfa_metinleri[1]['texttr']; ?></span></span></div>
+								<p><?php echo $sayfa_metinleri[2]['texttr']; ?></p>
 							</div>
 						</div>
 						<div class="col-md-3" style="padding:0 0 20px 0">
@@ -114,8 +114,8 @@
 								<div class="image_wrapper"><img class="scale-with-grid" src="/content/renovate4/images/reno4-about-icon4.png" alt="reno4-about-icon4" title="" width="125" height="300" /> </div>
 							</div>
 							<div class="column_attr clearfix" style="padding:55px 0% 0px;">
-								<div class="google_font" style="font-family:'Comfortaa',Arial,Tahoma,sans-serif;font-size:53px;line-height:53px;font-weight:700;letter-spacing:0px;color:#222222;"> <span class="counter-inline animate-math"><span class="number" data-to="350000">+350.000</span></span>m² </div>
-								<p>Uygulama Alanı (m²)</p>
+								<div class="google_font" style="font-family:'Comfortaa',Arial,Tahoma,sans-serif;font-size:53px;line-height:53px;font-weight:700;letter-spacing:0px;color:#222222;"> <span class="counter-inline animate-math"><span class="number" data-to="<?php echo $sayfa_metinleri[3]['texttr']; ?>"><?php echo $sayfa_metinleri[3]['texttr']; ?></span></span>m² </div>
+								<p><?php echo $sayfa_metinleri[4]['texttr']; ?></p>
 							</div>
 						</div>
 					</div>

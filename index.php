@@ -1,5 +1,10 @@
+<?php
 
-<?php include 'temel/ayarlar.php'; ?>
+include 'temel/ayarlar.php';
+
+$sayfa_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'p1%' order by kod");
+
+?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -28,7 +33,7 @@
                                     <rs-layer id="slider-1-slide-1-layer-0" data-type="text" data-color="#10293d" data-rsp_ch="on" data-xy="x:l,l,c,c;xo:80px,80px,1px,1px;y:m;yo:-146px,-146px,-190px,-190px;"
                                               data-text="w:normal;s:40,40,84,84;l:40,40,77,77;fw:700;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_999="o:0;st:w;"
                                               style="z-index:9;font-family:Comfortaa;">
-                                        <span style="background: #ffd800;">Yalıtımda <br>Güvenceniz, <br>Binanızda <br>Gücünüz Biziz.</span>
+                                        <?php echo $sayfa_metinleri[0]['texttr']; ?>
                                     </rs-layer>
 
                                     <a id="slider-1-slide-1-layer-1" class="rs-layer facebook_index_btn" href="https://www.facebook.com/profile.php?id=100064777278105" target="_blank" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
@@ -42,7 +47,7 @@
                                        data-rsp_ch="on" data-xy="x:l,l,c,c;xo:78px,78px,0,78px;yo:539px,539px,309px,309px;" data-text="w:normal;s:16,16,18,18;l:40,40,52,52;fw:700;"
                                        data-dim="minh:0px,0px,none,0px;" data-padding="t:4;r:40,40,52,52;b:4;l:40,40,52,52;" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;"
                                        data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_999="o:0;st:w;" data-frame_hover="c:#fff;bgc:#10293d;bor:0px,0px,0px,0px;bri:120%;" style="z-index:15;background-color:#ffd800;font-family:Open Sans;">
-                                        Bizimle İletişime Geçin
+                                        <?php echo $sayfa_metinleri[2]['texttr']; ?>
                                     </a>
 
                                     <rs-layer id="slider-1-slide-1-layer-3" data-type="shape" data-rsp_ch="on" data-xy="xo:80px,80px,67px,67px;yo:640px,640px,470px,470px;" data-text="w:normal;s:20,20,12,12;l:0,0,15,15;"
@@ -50,14 +55,13 @@
 
                                     <rs-layer id="slider-1-slide-1-layer-5" data-type="text" data-color="#10293d" data-rsp_ch="on" data-xy="xo:80px,80px,58px,58px;y:m;yo:-2px,-2px,-26px,-26px;"
                                               data-text="w:normal;s:16,16,9,9;l:26,26,15,15;" data-dim="w:478px,478px,299px,299px;" data-vbility="t,t,f,f" data-frame_999="o:0;st:w;" style="z-index:10;font-family:Open Sans;">
-                                        Profesyonel İzolasyon Hizmetleri ile Yapılarınızı Güvence Altına Alın. Teras, çatı, temel, dış cephe ve zeminleriniz için su geçirmez, ısı yalıtımlı, uzun ömürlü çözümler sunuyoruz.
+                                        <?php echo $sayfa_metinleri[1]['texttr']; ?>
                                     </rs-layer>
 
                                     <rs-layer id="slider-1-slide-1-layer-7" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on" data-xy="xo:80px,80px,60px,60px;y:m;yo:245px,245px,45px,45px;"
                                               data-text="w:normal;s:15,15,13,13;l:23,23,18,18;" data-dim="w:250px,250px,132px,132px;" data-vbility="t,t,f,f" data-frame_0="x:0,0,0px,0px;y:0,0,0px,0px;"
                                               data-frame_1="x:0,0,0px,0px;y:0,0,0px,0px;" data-frame_999="o:0;st:w;" style="z-index:11;font-family:Open Sans;">
-                                        Bizi yerimizde ziyaret edebilir, detaylı bilgi alabilirsiniz.
-                                        <br> Randevusuz da uğrayabilirsiniz!
+                                        <?php echo $sayfa_metinleri[5]['texttr']; ?>
                                     </rs-layer>
 
                                     <a id="slider-1-slide-1-layer-9" class="rs-layer" href="https://www.instagram.com/izolasyon.ozsoy/" target="_blank" rel="nofollow" data-type="text" data-color="rgba(16, 41, 61, 0.79)" data-rsp_ch="on"
@@ -84,9 +88,7 @@
 					<div class="row no-gutters">
 						<div class="col-md-6"> <img src="/content/renovate4/images/izo_ozsoy_izolasyon_hakkimizda.jpeg" class="hizmet_img" alt="reno4-home-team" title="" width="780" height="780" /> </div>
 						<div class="col-md-6" style="padding:50px 6%;background-color:#ffd800;background-image:url(content/renovate4/images/reno4-smallbg-1.png);background-repeat:no-repeat;background-position:right bottom">
-							<h3>Özsoy İzolasyon, 2004 yılından bu yana izolasyon sektöründe uzman kadrosu ve yenilikçi çözümleriyle hizmet vermektedir.</h3>
-							<p>Sprey poliüretan köpük, polyurea su yalıtımı, ısı, nem ve rutubet izolasyonu gibi alanlarda, uzun ömürlü ve etkili uygulamalar sunarak hem konutlarda
-                                hem sanayi yapılarında güven inşa eder. Kalite, güven ve müşteri memnuniyetini temel alan firmamız, her projeye özel çözümler üretir ve işini titizlikle tamamlar.</p>
+                            <?php echo $sayfa_metinleri[3]['texttr']; ?>
 							<hr class="no_line" style="margin:0 auto 20px"> <a class="button button_size_2" href="/hakkimizda"><span class="button_label">Hakkımızda</span></a> </div>
 					</div>
 				</div>
@@ -96,7 +98,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="text-left mobile_align_center">
-								<h2>Tüm yenileme ihtiyaçlarını karşılayan <br> geniş bir teklifimiz var</h2>
+                                <?php echo $sayfa_metinleri[4]['texttr']; ?>
                             </div>
 						</div>
 						<div class="col-12">
@@ -153,8 +155,7 @@
 									<hr style="margin:0 auto 35px;" /> </div>
 								<div class="col-md-9">
 									<div class="text-right mobile_align_center">
-										<p>Bizi yerimizde ziyaret edebilir, detaylı bilgi alabilirsiniz.
-                                            <br> Randevusuz da uğrayabilirsiniz!</p>
+                                        <?php echo $sayfa_metinleri[5]['texttr']; ?>
 									</div>
 								</div>
 								<div class="col-md-3">
@@ -173,7 +174,8 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="column_attr clearfix align_center" style="padding:20px 0 30px 0;">
-							<h2>Projelerimize Göz Atmak İster misiniz?</h2> </div>
+                            <?php echo $sayfa_metinleri[6]['texttr']; ?>
+                        </div>
 					</div>
 					<div class="col-12">
 						<div class="content_slider center">
@@ -198,9 +200,7 @@
 					</div>
 					<div class="col-12">
 						<div class="column_attr clearfix align_center" style="padding:40px 0 0;">
-							<p> Her proje, bizim için sadece bir iş değil; güvenin, kalitenin ve emeğin yansımasıdır. <br>
-                                Sunduğumuz yalıtım çözümlerinin nasıl fark yarattığını görmek için şimdiye kadar tamamladığımız uygulamalara göz atın. </p>
-                            <p><strong>Detaylarda gizli olan ustalığımızı siz de fark edeceksiniz.</strong></p>
+                            <?php echo $sayfa_metinleri[7]['texttr']; ?>
 						</div>
 					</div>
 				</div>

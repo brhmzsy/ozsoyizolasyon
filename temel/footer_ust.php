@@ -1,4 +1,16 @@
+<?php
 
+include 'temel/ayarlar.php';
+
+$sayfa_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'f%' order by kod");
+
+require_once __DIR__ . '/../php/ArayuzDuzenleme.php';;
+
+$telefon_class = new ArayuzDuzenleme();
+
+$telefon = $telefon_class->temizleTelefon($sayfa_metinleri[2]['texttr']);
+
+?>
 
 <div class="section mcb-section no-margin-h equal-height-wrap" style="padding-top:75px">
     <div class="container">
@@ -18,7 +30,7 @@
                     </div>
                     <div class="col-md-10">
                         <div class="column_attr clearfix mobile_align_center" style="padding:5px 0% 20px;">
-                            <h4 style="margin: 0;"><a href="tel:05333913838">+90 533 391 38 38</a></h4> </div>
+                            <h4 style="margin: 0;"><a href="tel:<?php echo $telefon; ?>"><?php echo $sayfa_metinleri["2"]["texttr"]; ?></a></h4> </div>
                     </div>
                     <!--								<div class="col-md-2">-->
                     <!--									<div class="column_attr clearfix align_center">-->
@@ -30,7 +42,7 @@
                     <!--								</div>-->
                     <div class="col-12">
                         <div class="column_attr clearfix mobile_align_center" style="padding:38px 0px 0px 0px;">
-                            <p>Pazartesi — Cuma: 09:00 — 18:00</p>
+                            <?php echo $sayfa_metinleri["1"]["texttr"]; ?>
                         </div>
                     </div>
                 </div>

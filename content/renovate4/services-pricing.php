@@ -1,5 +1,10 @@
+<?php
 
-<?php include '../../temel/ayarlar.php'; ?>
+include '../../temel/ayarlar.php';
+
+$sayfa_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'p3%' order by kod");
+
+?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -27,12 +32,9 @@
 					<div class="row">
 						<div class="col-md-5">
 							<div class="column_attr clearfix" style="padding:0px 0% 175px;">
-								<h1>Hizmetlerimiz</h1>
+                                <?php echo $sayfa_metinleri[0]['texttr']; ?>
 								<hr class="no_line" style="margin: 0 auto 20px auto" />
-								<p>Yaşam alanlarınızı daha güvenli, konforlu ve uzun ömürlü hâle getirmek için uzmanlıkla geliştirilmiş izolasyon çözümleri sunuyoruz. Özsoy İzolasyon olarak;
-                                    su, ısı ve ses yalıtımından, epoksi zemin kaplamaya ve çatı izolasyonuna kadar geniş bir yelpazede kaliteli hizmet veriyoruz. Her biri alanında deneyimli
-                                    ekiplerimiz, ihtiyaca özel malzeme ve uygulama teknikleriyle çalışarak maksimum verim, dayanıklılık ve estetik sunar. Aşağıda detaylarını bulabileceğiniz
-                                    hizmetlerimiz, projelerinizin her aşamasında yanınızda olmayı hedefler.</p>
+                                <?php echo $sayfa_metinleri[1]['texttr']; ?>
 							</div>
 						</div>
 					</div>

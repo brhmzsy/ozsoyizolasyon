@@ -1,5 +1,10 @@
+<?php
 
-<?php include '../../temel/ayarlar.php'; ?>
+include '../../temel/ayarlar.php';
+
+$sayfa_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'p4%' order by kod");
+
+?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -27,7 +32,8 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="column_attr clearfix">
-								<h1>Projelerimizi <br> Görün</h1> </div>
+                                <?php echo $sayfa_metinleri[0]['texttr']; ?>
+                            </div>
 						</div>
 					</div>
 				</div>
