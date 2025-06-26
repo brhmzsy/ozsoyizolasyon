@@ -4,13 +4,12 @@
 
 <?php
 
-    include ("../../php/connection.php");
-
 	global $con;
 
     require_once __DIR__ . '/../../vendor/autoload.php';
 
-    $con = new MysqliDb('localhost', 'root', '!MySql8?.', 'ozsoy_izolasyon');
+//    $con = new MysqliDb('localhost', 'root', '!MySql8?.', 'ozsoy_izolasyon');
+$con = new MysqliDb('localhost', 'brhmzsyc_admin', '!lW99&Z#aufU', 'brhmzsyc_ozsoy_izolasyon');
 	
 	if(isset($_POST["action"])){
         

@@ -26,7 +26,7 @@
         <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
         <link rel="shortcut icon" href="img/favicon.png">
 
-        <title>Blank</title>
+        <title>Kategoriler</title>
     
         <?php
             top_head();
@@ -127,7 +127,7 @@
                         if(data.durum) {
                             $('#basarili').click();
                             $('.modal_close').click();
-                            window.location.href = "/admin/blank7.php";
+                            window.location.href = "/admin/kategori_duzenle.php";
                         }
                     }
                 });
@@ -153,7 +153,7 @@
                         if(data.durum) {
                             $('#basarili').click();
                             $('.modal_close').click();
-                            window.location.href = "/admin/blank7.php";
+                            window.location.href = "/admin/kategori_duzenle.php";
                         }
                     }
                 });

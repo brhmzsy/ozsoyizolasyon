@@ -1,11 +1,12 @@
 <?php
-    include ("../php/connection.php");
 
 	require_once __DIR__ . '/../../vendor/autoload.php';
 
 	global $con;
 
-	$con = new MysqliDb('localhost', 'root', '!MySql8?.', 'ozsoy_izolasyon');
+//	$con = new MysqliDb('localhost', 'root', '!MySql8?.', 'ozsoy_izolasyon');
+$con = new MysqliDb('localhost', 'brhmzsyc_admin', '!lW99&Z#aufU', 'brhmzsyc_ozsoy_izolasyon');
+
 	function top_head(){
 		echo '
 			<!-- Bootstrap core CSS -->
@@ -165,9 +166,15 @@
 					</a>
 				</li>
 				<li>
-					<a href="blank7.php">
+					<a href="kategori_duzenle.php">
 						<i class="icon-dashboard"></i>
 						<span>Kategoriler</span>
+					</a>
+				</li>
+				<li>
+					<a href="galeri_duzenle.php">
+						<i class="icon-dashboard"></i>
+						<span>Galeri Düzenle</span>
 					</a>
 				</li>
 			';

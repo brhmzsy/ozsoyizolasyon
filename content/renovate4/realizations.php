@@ -4,6 +4,10 @@ include '../../temel/ayarlar.php';
 
 $sayfa_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'p4%' order by kod");
 
+$hedefKlasor = '../../admin/img/gallery/';
+$hedefKlasor_url = '/admin/img/gallery/';
+$resimler = glob($hedefKlasor . '*.{jpg,jpeg,png,gif,webp}', GLOB_BRACE);
+
 ?>
 
 <!DOCTYPE html>
@@ -42,27 +46,15 @@ $sayfa_metinleri = $con->rawQuery("SELECT * FROM page_texts WHERE kod LIKE 'p4%'
 				<div class="row">
 					<div class="col-12 column_image_gallery">
 						<div id='sc_gallery-4030' class='gallery galleryid-10 gallery-columns-2 gallery-size-full file'>
-							<dl class='gallery-item'> <dt class='gallery-icon landscape'>
-																<a href='/content/renovate4/images/proje-1.jpg'><img width="1024" height="700" src="/content/renovate4/images/proje-1.jpg" class="attachment-full size-full proje_img" alt="" loading="lazy" /></a>
-															</dt> </dl>
-							<dl class='gallery-item'> <dt class='gallery-icon landscape'>
-																<a href='/content/renovate4/images/proje-2.jpg'><img width="1024" height="700" src="/content/renovate4/images/proje-2.jpg" class="attachment-full size-full proje_img" alt="" loading="lazy" /></a>
-															</dt> </dl>
+                            <?php foreach ($resimler as $resim){
+                                $resim_adi = basename($resim);
+                                ?>
+                                <dl class='gallery-item'> <dt class='gallery-icon landscape'>
+                                        <a href='<?php echo $hedefKlasor_url . $resim_adi; ?>'><img width="1024" height="700" src="<?php echo $hedefKlasor_url . $resim_adi; ?>" class="attachment-full size-full proje_img" alt="" loading="lazy" /></a>
+                                    </dt> </dl>
+                            <?php } ?>
 							<br style="clear: both" />
-							<dl class='gallery-item'> <dt class='gallery-icon landscape'>
-																<a href='/content/renovate4/images/proje-3.jpg'><img width="1024" height="700" src="/content/renovate4/images/proje-3.jpg" class="attachment-full size-full proje_img" alt="" loading="lazy" /></a>
-															</dt> </dl>
-							<dl class='gallery-item'> <dt class='gallery-icon landscape'>
-																<a href='/content/renovate4/images/proje-4.jpg'><img width="1024" height="700" src="/content/renovate4/images/proje-4.jpg" class="attachment-full size-full proje_img" alt="" loading="lazy" /></a>
-															</dt> </dl>
-							<br style="clear: both" />
-							<dl class='gallery-item'> <dt class='gallery-icon landscape'>
-																<a href='/content/renovate4/images/proje-5.jpg'><img width="1024" height="700" src="/content/renovate4/images/proje-5.jpg" class="attachment-full size-full proje_img" alt="" loading="lazy" /></a>
-															</dt> </dl>
-							<dl class='gallery-item'> <dt class='gallery-icon landscape'>
-																<a href='/content/renovate4/images/proje-6.jpg'><img width="1024" height="700" src="/content/renovate4/images/proje-6.jpg" class="attachment-full size-full proje_img" alt="" loading="lazy" /></a>
-															</dt> </dl>
-							<br style="clear: both" /> </div>
+                        </div>
 					</div>
 				</div>
 			</div>

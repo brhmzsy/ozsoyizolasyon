@@ -1,13 +1,13 @@
 <?php
 
 	session_start();
-    include ("connection.php");
 
     require_once __DIR__ . '/../../vendor/autoload.php';
 
     global $con;
 
-    $con = new MysqliDb('localhost', 'root', '!MySql8?.', 'ozsoy_izolasyon');
+//    $con = new MysqliDb('localhost', 'root', '!MySql8?.', 'ozsoy_izolasyon');
+$con = new MysqliDb('localhost', 'brhmzsyc_admin', '!lW99&Z#aufU', 'brhmzsyc_ozsoy_izolasyon');
 
     if(isset($_POST["duzenle"])){
 
@@ -195,6 +195,74 @@
                 }
             }else
                 echo json_encode(["durum" => false]);
+        }
+
+        if($_POST["action"] == "galeri_kaydet") {
+
+            $gelen = $_POST;
+
+            try {
+
+                $hedefKlasor = '../img/gallery/';
+
+                foreach ($_FILES["dosya"]["name"] as $key => $dosya){
+
+                    if($_FILES["dosya"]["error"][$key] == 0){
+                        $geciciDosya = $_FILES["dosya"]['tmp_name'][$key];
+
+                        $dosyaAdi = $_FILES["dosya"]['name'][$key];
+                        $hedefYol = $hedefKlasor . $dosyaAdi;
+
+                        if (!is_dir($hedefKlasor)) {
+                            mkdir($hedefKlasor, 0777, true);
+                        }
+
+                        if(move_uploaded_file($geciciDosya, $hedefYol)) {
+                            $mesaj = "Dosya başarıyla yüklendi.";
+                        } else {
+                            $mesaj = "Dosya yükleme sırasında bir hata oluştu.";
+                        }
+                    }
+
+                }
+
+                echo json_encode(["durum" => true]);
+            } catch (Exception $e) {
+                $hata = $e->getMessage();
+                echo json_encode(["durum" => false]);
+            }
+        }
+
+        if($_POST["action"] == "resim_kaldir") {
+
+            $gelen = $_POST;
+
+            try {
+
+                $resim_adi = basename($gelen["resim_adi"]);
+
+                if(!empty($resim_adi)) {
+
+                    $hedefKlasor = '../img/gallery/';
+                    $hedefYol = '../img/eski_galeri/' . $resim_adi;
+
+                    $geciciDosya = $hedefKlasor . $resim_adi;
+
+                    if (copy($geciciDosya, $hedefYol)) {
+                        $mesaj = "Dosya başarıyla yüklendi.";
+                        unlink($geciciDosya);
+                    } else {
+                        $mesaj = "Dosya yükleme sırasında bir hata oluştu.";
+                    }
+                }else{
+                    echo json_encode(["durum" => false]);
+                }
+
+                echo json_encode(["durum" => true]);
+            } catch (Exception $e) {
+                $hata = $e->getMessage();
+                echo json_encode(["durum" => false]);
+            }
         }
 
         if($_POST["action"] == "kategori_bilgi_getir") {
