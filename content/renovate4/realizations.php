@@ -50,7 +50,7 @@ $resimler = glob($hedefKlasor . '*.{jpg,jpeg,png,gif,webp}', GLOB_BRACE);
                                 $resim_adi = basename($resim);
                                 ?>
                                 <dl class='gallery-item'> <dt class='gallery-icon landscape'>
-                                        <a href='<?php echo $hedefKlasor_url . $resim_adi; ?>'><img width="1024" height="700" src="<?php echo $hedefKlasor_url . $resim_adi; ?>" class="attachment-full size-full proje_img" alt="" loading="lazy" /></a>
+                                        <a href='<?php echo $hedefKlasor_url . $resim_adi; ?>'><img src="<?php echo $hedefKlasor_url . $resim_adi; ?>" class="attachment-full size-full proje_img" alt="" loading="lazy" /></a>
                                     </dt> </dl>
                             <?php } ?>
 							<br style="clear: both" />

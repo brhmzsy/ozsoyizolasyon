@@ -5,10 +5,10 @@
                     <div class="top_bar_left clearfix">
                         <div class="logo">
                             <a id="logo" href="/" title="BeRenovate 4 - Betheme" data-height="60" data-padding="15">
-                                <img class="logo-main scale-with-grid" src="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-retina="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-height="58" alt="renovate4_logo" data-no-retina/>
-                                <img class="logo-sticky scale-with-grid" src="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-retina="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-height="58" alt="renovate4_logo" data-no-retina/>
-                                <img class="logo-mobile scale-with-grid" src="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-retina="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-height="58" alt="renovate4_logo" data-no-retina/>
-                                <img class="logo-mobile-sticky scale-with-grid" src="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-retina="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-height="58" alt="renovate4_logo" data-no-retina/>
+                                <img class="logo-main scale-with-grid menu_logo" src="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-retina="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-height="58" alt="renovate4_logo" data-no-retina/>
+                                <img class="logo-sticky scale-with-grid menu_logo" src="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-retina="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-height="58" alt="renovate4_logo" data-no-retina/>
+                                <img class="logo-mobile scale-with-grid menu_logo" src="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-retina="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-height="58" alt="renovate4_logo" data-no-retina/>
+                                <img class="logo-mobile-sticky scale-with-grid menu_logo" src="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-retina="/content/renovate4/images/izo_ozsoy_izolasyon.png" data-height="58" alt="renovate4_logo" data-no-retina/>
                             </a>
                         </div>
                         <div class="menu_wrapper">

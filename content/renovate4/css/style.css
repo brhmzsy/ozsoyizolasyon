@@ -18,7 +18,22 @@
     flex-direction: row;
 }
 
+.proje_img {
+    height: 510px !important;
+    width: auto !important;
+    object-fit: cover !important;
+}
+
+.menu_logo {
+    height: 60px !important;
+}
+
 @media only screen and (max-width: 768px) {
+
+    #Top_bar .logo #logo img {
+        height: 60px !important;
+    }
+
     .hizmet_img {
         height: 350px !important;
     }
